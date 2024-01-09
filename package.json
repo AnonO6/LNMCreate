@@ -1,0 +1,29 @@
+{
+  "name": "lnmcreate1",
+  "version": "1.0.0",
+  "description": "Platform for LNM Devs to collab",
+  "main": "index.js",
+  "scripts": {
+    "start": "rm -rf .parcel-cache && parcel ./index.html",
+    "build": "rm -rf .parcel-cache && parcel build ./index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnonO6/LNMCreate.git"
+  },
+  "author": "Aviral Shukla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnonO6/LNMCreate/issues"
+  },
+  "homepage": "https://github.com/AnonO6/LNMCreate#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  }
+}
