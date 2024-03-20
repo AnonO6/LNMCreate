@@ -5,7 +5,7 @@ const projectList = [
     Head: "Aviral Shukla",
     Year: "Y21",
     technologies: ["React Native", "React", "git"],
-    type: "WEB",
+    type: "APP",
     imgsrc:
       "https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/Bus-Booking-Engine.png",
   },
@@ -15,7 +15,7 @@ const projectList = [
     Head: "Chirag Birla",
     Year: "Y21",
     technologies: ["Kotlin", "Java", "git"],
-    type: "ANDROID",
+    type: "APP",
     imgsrc:
       "https://www.smginfotech.com/wp-content/uploads/2022/07/outpaas-300x212.jpg",
   },
@@ -28,6 +28,15 @@ const projectList = [
     type: "WEB",
     imgsrc:
       "https://assets-global.website-files.com/6443d6d96a788f6942166567/64710dafbb86adbb8a096e2d_Website-Design-new-p-1080.jpeg",
+  },
+  {
+    ID: 4,
+    title: "EdTech platform",
+    Head: "Aviral Shukla",
+    Year: "Y21",
+    technologies: ["React", "ExpresJs", "firebase", "mongoDB"],
+    type: "WEB",
+    imgsrc: "https://cxotoday.com/wp-content/uploads/2022/07/CXO-Edtech.jpg",
   },
 ];
 

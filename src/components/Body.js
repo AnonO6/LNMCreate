@@ -20,7 +20,7 @@ const Body = () => {
           className="ANDROID"
           onClick={() => {
             setProjectList(
-              projectList.filter((project) => project.type == "ANDROID")
+              projectList.filter((project) => project.type == "APP")
             );
           }}
         >

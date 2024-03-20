@@ -1,4 +1,5 @@
 import logo from "../utils/LNMIIT-logo.jpeg";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
@@ -13,9 +14,15 @@ const NavComponent = () => {
   return (
     <div className="nav-items">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/About">About us</Link>
+        </li>
+        <li>
+          <Link to="/Contact">Contact us</Link>
+        </li>
       </ul>
     </div>
   );
