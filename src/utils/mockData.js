@@ -3,7 +3,7 @@ const projectList = [
     ID: 1,
     title: "Bus booking System",
     Head: "Aviral Shukla",
-    Year: "Y21",
+    Year: ["Y21", "Y22"],
     technologies: ["React Native", "React", "git"],
     type: "APP",
     imgsrc:
@@ -13,7 +13,7 @@ const projectList = [
     ID: 2,
     title: "Outpass System",
     Head: "Chirag Birla",
-    Year: "Y21",
+    Year: ["Y21"],
     technologies: ["Kotlin", "Java", "git"],
     type: "APP",
     imgsrc:
@@ -23,7 +23,7 @@ const projectList = [
     ID: 3,
     title: "College Project Website",
     Head: "Sanidhya Shukla",
-    Year: "Y22",
+    Year: ["Y22", "Y23"],
     technologies: ["MongoDB", "ExpresJs", "React", "NodeJs"],
     type: "WEB",
     imgsrc:
@@ -33,7 +33,7 @@ const projectList = [
     ID: 4,
     title: "EdTech platform",
     Head: "Aviral Shukla",
-    Year: "Y21",
+    Year: ["Y21", "Y22"],
     technologies: ["React", "ExpresJs", "firebase", "mongoDB"],
     type: "WEB",
     imgsrc: "https://cxotoday.com/wp-content/uploads/2022/07/CXO-Edtech.jpg",

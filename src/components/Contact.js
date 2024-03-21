@@ -1,7 +1,9 @@
 const Contact = () => {
   return (
     <div>
-      <h2>Contact me at shuklaaviral006@gmail.com</h2>
+      <h2 style={{ color: "black" }}>
+        Contact me at shuklaaviral006@gmail.com
+      </h2>
     </div>
   );
 };
