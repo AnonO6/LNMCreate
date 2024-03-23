@@ -1,4 +1,4 @@
-import logo from "../utils/LNMIIT-logo.jpeg";
+import logo from "../assets/LNMIIT-logo.jpeg";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
@@ -18,10 +18,10 @@ const NavComponent = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/About">About us</Link>
+          <Link to="/Contact">Contact us</Link>
         </li>
         <li>
-          <Link to="/Contact">Contact us</Link>
+          <Link to="/Profile">Profile</Link>
         </li>
       </ul>
     </div>

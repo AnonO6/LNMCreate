@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import projectList from "../utils/mockData";
+import projectList from "../data/mockData";
 const ProjectDetail = () => {
   const { id } = useParams();
   return (

@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
-import projectList from "../utils/mockData";
+import projectList from "../data/mockData";
 import { useState } from "react";
+import useFilter from "../utils/useFilter";
 const Body = () => {
   const [ProjectList, setProjectList] = useState(projectList);
   return (
@@ -9,9 +10,7 @@ const Body = () => {
         <button
           className="WEB"
           onClick={() => {
-            setProjectList(
-              projectList.filter((project) => project.type == "WEB")
-            );
+            setProjectList(useFilter("WEB", projectList));
           }}
         >
           WEB PROJECT
@@ -19,9 +18,7 @@ const Body = () => {
         <button
           className="ANDROID"
           onClick={() => {
-            setProjectList(
-              projectList.filter((project) => project.type == "APP")
-            );
+            setProjectList(useFilter("APP", projectList));
           }}
         >
           ANDROID PROJECT
@@ -29,7 +26,7 @@ const Body = () => {
         <button
           className="ALL"
           onClick={() => {
-            setProjectList(projectList);
+            setProjectList(useFilter("ALL", projectList));
           }}
         >
           ALL PROJECTS

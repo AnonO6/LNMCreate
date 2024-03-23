@@ -1,14 +1,16 @@
-import React from "react";
+//Normal imports
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import Footer from "./components/Footer";
-import About from "./components/About";
 import Contact from "./components/Contact";
+import Login from "./components/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ProjectDetail from "./components/ProjectDetail";
-
+//Lazy loading/ Dynamic bundeling
+const Profile = lazy(() => import("./components/Profile"));
 const AppLayout = () => {
   return (
     <div className="App">
@@ -29,8 +31,18 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/About",
-        element: <About />,
+        path: "/Profile",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Profile />
+          </Suspense>
+        ),
+        children: [
+          {
+            path: "Dashboard",
+            element: <Login />,
+          },
+        ],
       },
       {
         path: "/Contact",

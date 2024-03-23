@@ -4,9 +4,9 @@ const Error = () => {
   console.log(error);
   return (
     <div>
-      <h2>OOPS! LOOKS LIKE SOME ERROR OCCURED</h2>
-      <h3>Error status code: {error.status} </h3>
-      <h3>Error message: {error.statusText}</h3>
+      <h2 style={{ color: "black" }}>OOPS! LOOKS LIKE SOME ERROR OCCURED</h2>
+      <h3 style={{ color: "black" }}>Error status code: {error.status} </h3>
+      <h3 style={{ color: "black" }}>Error message: {error.statusText}</h3>
     </div>
   );
 };
