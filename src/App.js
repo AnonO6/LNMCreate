@@ -5,12 +5,12 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
 import Login from "./components/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ProjectDetail from "./components/ProjectDetail";
 //Lazy loading/ Dynamic bundeling
 const Profile = lazy(() => import("./components/Profile"));
+const Culture = lazy(() => import("./components/Culture"));
 const AppLayout = () => {
   return (
     <div className="App">
@@ -45,8 +45,12 @@ const appRouter = createBrowserRouter([
         ],
       },
       {
-        path: "/Contact",
-        element: <Contact />,
+        path: "/Culture",
+        element: (
+          <Suspense fallback={<h1>LOADING... ^-^</h1>}>
+            <Culture />
+          </Suspense>
+        ),
       },
       {
         path: "/Project/:id",

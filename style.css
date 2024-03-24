@@ -28,6 +28,7 @@
 a,
 h1,
 h2,
+p,
 h3 {
   color: cornsilk;
   text-decoration: solid;
@@ -64,6 +65,11 @@ h3 {
 }
 .projectDetails > img {
   width: 400px;
+  padding: 10px;
+  margin: 20px;
+}
+.culture {
+  background-color: rgb(1, 163, 144);
   padding: 10px;
   margin: 20px;
 }

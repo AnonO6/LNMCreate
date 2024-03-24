@@ -18,7 +18,7 @@ const NavComponent = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/Contact">Contact us</Link>
+          <Link to="/Culture">Culture</Link>
         </li>
         <li>
           <Link to="/Profile">Profile</Link>
