@@ -74,11 +74,16 @@ h3 {
   margin: 20px;
 }
 .footer {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 50px;
   border-radius: 5px;
   box-shadow: -1px 4px 40px 20px rgba(0, 0, 0, 0.2);
   background-color: rgb(1, 163, 144);
+}
+.footer > h3 {
+  margin: 10px;
 }
 .profile {
   display: flex;
@@ -87,9 +92,35 @@ h3 {
   margin: 20px;
   padding: 20 px;
 }
+.login {
+  background-color: rgb(1, 163, 144);
+  margin: 20px;
+  padding: 20px;
+}
+.login > label {
+  color: antiquewhite;
+  padding: 10px;
+  margin: 10px;
+}
+.login > label > input {
+  margin-left: 5px;
+}
+.login > button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0 15px;
+  width: 100px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+  background-color: antiquewhite;
+}
 .profile > img {
   width: 400px;
 }
-.profile > h1 {
-  margin: 20px;
+.profile > div {
+  margin: 10px;
+  margin-left: 40px;
 }

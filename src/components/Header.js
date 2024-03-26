@@ -1,5 +1,7 @@
 import logo from "../assets/LNMIIT-logo.jpeg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 const Header = () => {
   return (
     <div className="header">
@@ -11,6 +13,8 @@ const Header = () => {
   );
 };
 const NavComponent = () => {
+  const { user } = useContext(UserContext);
+  const profile = user.isLoggedIn ? "Profile" : "Login";
   return (
     <div className="nav-items">
       <ul>
@@ -21,7 +25,7 @@ const NavComponent = () => {
           <Link to="/Culture">Culture</Link>
         </li>
         <li>
-          <Link to="/Profile">Profile</Link>
+          <Link to={"/" + profile}>{profile}</Link>
         </li>
       </ul>
     </div>

@@ -1,5 +1,5 @@
 //Normal imports
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useContext, useState } from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,15 +8,20 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ProjectDetail from "./components/ProjectDetail";
+//Context
+import UserContext from "./utils/UserContext";
 //Lazy loading/ Dynamic bundeling
 const Profile = lazy(() => import("./components/Profile"));
 const Culture = lazy(() => import("./components/Culture"));
 const AppLayout = () => {
+  const [user, setUser] = useState(useContext(UserContext).user);
   return (
     <div className="App">
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider value={{ user, setUser }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </div>
   );
 };
@@ -37,12 +42,10 @@ const appRouter = createBrowserRouter([
             <Profile />
           </Suspense>
         ),
-        children: [
-          {
-            path: "Dashboard",
-            element: <Login />,
-          },
-        ],
+      },
+      {
+        path: "/Login",
+        element: <Login />,
       },
       {
         path: "/Culture",

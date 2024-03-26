@@ -1,4 +1,14 @@
+import { useContext } from "react";
+import DevContext from "../utils/DevContext";
 const Footer = () => {
-  return <div className="footer"></div>;
+  const devData = useContext(DevContext);
+  return (
+    <div className="footer">
+      <h3>Made with ❤️ by {devData.devName}</h3>
+      <h3>
+        <a href={devData.devId}>{devData.devId}</a>
+      </h3>
+    </div>
+  );
 };
 export default Footer;
