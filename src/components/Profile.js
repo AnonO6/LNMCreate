@@ -10,6 +10,7 @@
 // export default About;
 import React from "react";
 import UserContext from "../utils/UserContext";
+import { Navigate } from "react-router-dom";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -25,16 +26,28 @@ class Profile extends React.Component {
   }
   render() {
     return (
-      <div className="profile">
-        <div>
-          <h1>PROFILE</h1>
-          <UserContext.Consumer>
-            {(value) => <h2>Welcome, {value.user.username}!</h2>}
-          </UserContext.Consumer>
-        </div>
+      <UserContext.Consumer>
+        {(value) => {
+          if (!value.user.isLoggedIn) {
+            return <Navigate to="/Login" />;
+          } else {
+            return (
+              <div class="flex flex-wrap rounded-xl justify-between m-5 bg-teal-300 ">
+                <div class="p-3">
+                  <h1 class="text-4xl text-bold font-sans">PROFILE</h1>
+                  <h2>Welcome, {value.user.username}!</h2>
+                </div>
 
-        <img src={this.state.profileImage} alt="Profile Picture" />
-      </div>
+                <img
+                  class="w-96 h-96 border-solid border-4 border-red-950 rounded-xl"
+                  src={this.state.profileImage}
+                  alt="Profile Picture"
+                />
+              </div>
+            );
+          }
+        }}
+      </UserContext.Consumer>
     );
   }
 }

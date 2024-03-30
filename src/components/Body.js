@@ -6,9 +6,9 @@ const Body = () => {
   const [ProjectList, setProjectList] = useState(projectList);
   return (
     <div>
-      <div className="filter">
+      <div class="flex justify-evenly w-1/2">
         <button
-          className="WEB"
+          class="middle none center rounded-lg bg-teal-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           onClick={() => {
             setProjectList(useFilter("WEB", projectList));
           }}
@@ -16,23 +16,23 @@ const Body = () => {
           WEB PROJECT
         </button>
         <button
-          className="ANDROID"
-          onClick={() => {
-            setProjectList(useFilter("APP", projectList));
-          }}
-        >
-          ANDROID PROJECT
-        </button>
-        <button
-          className="ALL"
+          class="middle none center rounded-lg bg-teal-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           onClick={() => {
             setProjectList(useFilter("ALL", projectList));
           }}
         >
           ALL PROJECTS
         </button>
+        <button
+          class="middle none center rounded-lg bg-teal-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          onClick={() => {
+            setProjectList(useFilter("APP", projectList));
+          }}
+        >
+          ANDROID PROJECT
+        </button>
       </div>
-      <div className="project-container">
+      <div class="flex flex-wrap p-4 m-4">
         {ProjectList.map((project) => {
           return <ProjectCard key={project.ID} {...project} />;
         })}

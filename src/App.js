@@ -8,20 +8,25 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ProjectDetail from "./components/ProjectDetail";
+import { Provider } from "react-redux";
+import store from "./utils/store.js";
 //Context
 import UserContext from "./utils/UserContext";
 //Lazy loading/ Dynamic bundeling
 const Profile = lazy(() => import("./components/Profile"));
 const Culture = lazy(() => import("./components/Culture"));
+
 const AppLayout = () => {
   const [user, setUser] = useState(useContext(UserContext).user);
   return (
-    <div className="App">
-      <UserContext.Provider value={{ user, setUser }}>
-        <Header />
-        <Outlet />
-        <Footer />
-      </UserContext.Provider>
+    <div className="app">
+      <Provider store={store}>
+        <UserContext.Provider value={{ user, setUser }}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </UserContext.Provider>
+      </Provider>
     </div>
   );
 };
