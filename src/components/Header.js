@@ -10,12 +10,9 @@ const Header = () => {
   const projects = useSelector((store) => store.appliedProject.projects);
   return (
     <div class="flex flex-wrap font-bold font-sans text-2xl justify-between mt-3 mb-3 p-3">
-      <div class="ml-5">
-        <Link to="/">Home</Link>
-      </div>
       <div>
         <img
-          class="max-w-64 relative bottom-5 left-8 -m-10"
+          class="max-w-72 relative bottom-9 right-10 -m-10"
           src={logoLight}
           alt="LNMCreate logo"
         />
@@ -25,6 +22,9 @@ const Header = () => {
           <h2>APPLIED PROJECTS: {projects.length}</h2>
         </div>
         <div>
+          <Link class="m-4" to="/">
+            Home
+          </Link>
           <Link class="m-4" to="/Culture">
             Culture
           </Link>
